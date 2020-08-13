@@ -7,14 +7,14 @@ using namespace code047;
 void threadFoo() {
 	// Following code emulates slow initialization.
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-	std::shared_ptr<Singleton> foo_ptr = Singleton::getInstance(100);
+	Singleton* foo_ptr = Singleton::getInstance(100);
 	std::cout << "Foo: " << foo_ptr->getValue() << std::endl;
 }
 
 void threadBar() {
 	// Following code emulates slow initialization.
 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-	std::shared_ptr<Singleton> bar_ptr = Singleton::getInstance(99);
+	Singleton* bar_ptr = Singleton::getInstance(99);
 	std::cout << "Bar: " << bar_ptr->getValue() << std::endl;
 }
 
