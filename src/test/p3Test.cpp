@@ -1,5 +1,6 @@
 #include "../../include/catch.hpp"
 #include "../p3/DuplicateNumbers.h"
+#include "../p3/D2.h"
 #include <iostream>
 
 using namespace code047;
@@ -62,4 +63,33 @@ TEST_CASE("p3") {
 	//	std::cout << sizeof(ba) << std::endl;
 	//	std::cout << sizeof(bi) << std::endl;
 	//}
+}
+
+TEST_CASE("ÖØ¸´Êý×é2") {
+	SECTION("two duplicate") {
+		int a[8] = {2, 3, 5, 4, 3, 2, 6, 7 };
+		int res = getDuplicate(a, 8);
+		bool pass = (res == 2 || res == 3);
+		REQUIRE(pass == true);
+	}
+	SECTION("one duplicate") {
+		int a[7] = { 3, 5, 4, 3, 2, 6, 7 };
+		int res = getDuplicate(a, 7);
+		REQUIRE(res == 3);
+	}
+	SECTION("no duplicate") {
+		int a[6] = { 5, 4, 3, 2, 6, 7 };
+		int res = getDuplicate(a, 6);
+		REQUIRE(res == -1);
+	}
+	SECTION("nullptr") {
+		int* a = nullptr;
+		int res = getDuplicate(a, 6);
+		REQUIRE(res == -1);
+	}
+	SECTION("length 0") {
+		int a[3] = {1, 2, 3};
+		int res = getDuplicate(a, 0);
+		REQUIRE(res == -1);
+	}
 }
