@@ -23,6 +23,13 @@ TEST_CASE("P4 TEST") {
 				}
 			}
 		}
+
+		SECTION("key not in a") {
+			const int key = 3;
+			bool inArray = tb->exist(a, key);
+			REQUIRE(inArray == false);
+		}
+
 		SECTION("key bigger than all elements in a") {
 			const int key = 30;
 			bool inArray = tb->exist(a, key);
