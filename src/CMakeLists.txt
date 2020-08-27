@@ -30,6 +30,4 @@ foreach(X IN LISTS questions)
 endforeach()
 add_subdirectory("test")
 
-
-
 # TODO: Add tests and install targets if needed.

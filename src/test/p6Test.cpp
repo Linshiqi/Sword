@@ -1,5 +1,4 @@
 #include "../../include/catch.hpp"
-
 #include "../p6/PrintLinkReverse.h"
 
 using namespace code047;

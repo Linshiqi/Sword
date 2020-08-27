@@ -40,8 +40,6 @@ namespace code047 {
 		std::shared_ptr<ListNode<T>> head_ptr;	// 头节点， 包含数据
 	};
 
-
-
 	class PrintLinkReverse {
 	public:
 		template<typename T>
