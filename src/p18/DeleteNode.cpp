@@ -33,11 +33,3 @@ void deleteNode(ListNode** pListHead, ListNode* pToBeDeleted) {
         pToBeDeleted = NULL;
     }
 }
-
-void printList(ListNode** pHead) {
-    ListNode* cur = *pHead;
-    while (cur != NULL) {
-        std::cout << cur->m_nValue << std::endl;
-        cur = cur->m_pNext;
-    }
-}
